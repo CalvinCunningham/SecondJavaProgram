@@ -3,10 +3,10 @@ package SecondProgram;
 public class Stack {
 
 	/* This stack program will create a private stack 
-	 * that can only access it members through operatinos.
+	 * that can only access it members through operations.
 	 */
 	
-	final private int MAX_VALUE = 10;
+	final int MAX_VALUE = 100;
 	private int stck[] = new int[MAX_VALUE];
 	private int tos;
 	
@@ -17,7 +17,7 @@ public class Stack {
 	
 	void push (int item) {
 		
-		if( tos > MAX_VALUE -1 ) 
+		if( tos > (MAX_VALUE -1 )) 
 			System.out.println("The Stack is full ");
 		else 
 			stck[++tos] = item;
@@ -42,7 +42,7 @@ public class Stack {
 		for( int item: stck ) {
 			
 			 if( item > 0)
-			    System.out.print(item + "  ");
+			     System.out.print(item + "  ");
 		}
 	
 		System.out.println("Stack Complete.");
@@ -57,11 +57,12 @@ public class Stack {
 		
 		Stack stack = new Stack();
 		
-		stack.push(10);
-		stack.push(15);
-		stack.push(20);
-		stack.push(25);
-		stack.push(30);
+		
+		
+		for( int index = 1; index < (stack.MAX_VALUE ); index++) {
+			
+			stack.push(index);
+		}
 		
 		stack.printStack();
 		
